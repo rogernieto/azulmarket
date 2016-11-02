@@ -1,0 +1,31 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="main container">
+        <div class="row well">
+            <div class="col-md-6">
+                <div class="page-header">
+                    <h2>{% trans %}Edit Category{% endtrans %}</h2>
+                </div>
+
+                {{ form_start(edit_form) }}
+
+                {{ form_label(edit_form.name) }}
+                {{ form_widget(edit_form.name, {'attr':{'class':'form-control', 'placeholder':'Category'}}) }}
+
+                {{ form_label(edit_form.description) }}
+                {{ form_widget(edit_form.description, { 'attr': { 'class':'form-control', 'placeholder':'Description' }}) }}
+                <br/>
+                <p>
+                    {{ form_widget(edit_form.save, {'label' : 'Editar Categoría', 'attr': { 'class':'btn btn-success' }}) }}
+                </p>
+                {{ form_end(edit_form) }}
+                <p><br/>
+                    {{ form(delete_form) }}
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

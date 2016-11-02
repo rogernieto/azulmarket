@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="container well">
+        <div class="col-md-9">
+
+            <dl>
+                <dt>{{'Category'|trans}}</dt>
+                <dd>
+                    {{ entity.id }}
+                    &nbsp;
+                </dd>
+                <br/>
+
+                <dt>{{'Name'|trans}}</dt>
+                <dd>
+                    {{ entity.name }}
+                    &nbsp;
+                </dd>
+                <br/>
+
+                <dt>{{'Description'|trans}}</dt>
+                <dd>
+                    {{ entity.description }}
+                    &nbsp;
+                </dd>
+                <br/>
+            </dl>
+
+            <div class="col-md-3">
+                <h3>{{ 'Acciones'}}:</h3>
+                <p>
+                    <a href="{{ path('category_edit', { id: entity.id }) }}" class="btn btn-primary btn-lg btn-block">
+                        <span class="glyphicon glyphicon-edit"></span>
+                        {{ 'Editar Categoría' }}
+                    </a>
+                </p>
+                <br/>
+                <p>
+                    {{ form(delete_form) }}
+                </p>
+                <br/>
+                <p>
+                    <a href="{{ path('category') }}" class="btn btn-default">
+                        Back to the list
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

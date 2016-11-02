@@ -1,0 +1,22 @@
+ranh_user:
+    resource: "@RANHUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+#rutas para creacion de usuario desde fuera
+ranh_user_register: 
+  path: /register
+  defaults: 	{ _controller: RANHUserBundle:User:register}
+
+ranh_create_create2: 
+  path: /create2
+  defaults: {_controller: RANHUserBundle:User:create2}
+#METODO PARA ELEGIR NUESTRO MODO, EN ESTE CASO POST
+  methods: POST
+
+

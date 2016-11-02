@@ -1,0 +1,73 @@
+ranh_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: RANHUserBundle:Default:index }
+
+
+ranh_user_index:
+    path:     /index
+    defaults: {_controller: RANHUserBundle:User:index}
+
+
+ranh_user_add: 
+  path: /add 
+  defaults: {_controller: RANHUserBundle:User:add}
+
+ranh_user_create: 
+  path: /create
+  defaults: {_controller: RANHUserBundle:User:create}
+#METODO PARA ELEGIR NUESTRO MODO, EN ESTE CASO POST
+  methods: POST
+
+ranh_user_edit:
+  path: /edit/{id}
+  defaults: {_controller: RANHUserBundle:User:edit}
+
+ranh_user_update:
+  path: /update/{id}
+  defaults: {_controller: RANHUserBundle:User:update}
+  methods: [POST, PUT]
+
+ranh_user_view: 
+  path: /view/{id}
+  defaults: {_controller: RANHUserBundle:User:view}
+
+ranh_user_delete: 
+  path: /delete/{id}
+  defaults: {_controller: RANHUserBundle:User:delete}
+  methods: [POST,DELETE]
+
+ranh_user_redirect_path: 
+    path: /create
+    defaults: 
+      _controller: RANHUserBundle:User:add
+      path: /add 
+      permanent: true
+
+ranh_edit_redirect_path: 
+    path: /update/{id}
+    defaults: 
+      _controller: RANHUserBundle:User:edit
+      path: /edit/{id}
+      permanent: true
+
+
+
+
+
+
+#Ruta de ejemplo
+ranh_user_articles:
+  #esta es la ruta que se ingresara en el browser
+  #el parametro debe establecerse al final de la ruta entre corchetes
+    path:     /user/articles/{page}
+  #RANHUserBundle:User:Controlador que se invocará
+  #page: 1 , así se pone un valor por defecto en un parametro 
+    defaults: {_controller: RANHUserBundle:User:articles, page:1}
+  # Validar que solo se acepten numeros como parametro 
+    requirements: 
+      page: \d+
+
+
+
+
+

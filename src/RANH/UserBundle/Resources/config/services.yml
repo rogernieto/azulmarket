@@ -1,0 +1,4 @@
+services:
+#    ranh_user.example:
+#        class: RANH\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

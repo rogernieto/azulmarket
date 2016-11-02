@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>New User</source>
+                <target>Crear Usuario</target>
+            </trans-unit>
+
+            <trans-unit id="2">
+                <source>Username</source>
+                <target>Usuario</target>
+            </trans-unit>
+            <trans-unit id="3">
+                <source>First name</source>
+                <target>Primer nombre</target>
+            </trans-unit>
+            <trans-unit id="4">
+                <source>Last name</source>
+                <target>Apellido</target>
+            </trans-unit>
+            <trans-unit id="5">
+                <source>Role</source>
+                <target>Rol</target>
+            </trans-unit>
+            <trans-unit id="6">
+                <source>Active</source>
+                <target>Activo</target>
+            </trans-unit>
+
+            <trans-unit id="7">
+                <source>Next</source>
+                <target>Siguiente</target>
+            </trans-unit>
+            <trans-unit id="8">
+                <source>Previous</source>
+                <target>Anterior</target>
+            </trans-unit>
+
+            <trans-unit id="9">
+                <source>Edit user</source>
+                <target>Editar usuario</target>
+            </trans-unit>
+             <trans-unit id="10">
+                <source>Enabled</source>
+                <target>Habilitado</target>
+            </trans-unit>
+             <trans-unit id="11">
+                <source>Search user</source>
+                <target>Buscar usuario</target>
+            </trans-unit>
+             <trans-unit id="12">
+                <source>Search</source>
+                <target>Buscar</target>
+            </trans-unit>
+             <trans-unit id="13">
+                <source>No search result</source>
+                <target>No existen resultados</target>
+            </trans-unit>
+
+             <trans-unit id="14">
+                <source>New Account</source>
+                <target>Nueva cuenta</target>
+            </trans-unit>
+            <trans-unit id="15">
+                <source>New Category</source>
+                <target>Nueva Categoría</target>
+            </trans-unit>
+
+            <trans-unit id="16">
+                <source>Description</source>
+                <target>Descripción</target>
+            </trans-unit>
+
+
+            <trans-unit id="17">
+                <source>Create Category</source>
+                <target>Crear Categoría</target>
+            </trans-unit>
+
+            <trans-unit id="18">
+                <source>Name</source>
+                <target>Nombre</target>
+            </trans-unit>
+
+            <trans-unit id="19">
+                <source>Categories</source>
+                <target>Categorías</target>
+            </trans-unit>
+
+            <trans-unit id="20">
+                <source>The Category has been added</source>
+                <target>La categoría ha sido agregada</target>
+            </trans-unit>
+
+            <trans-unit id="21">
+                <source>Edit Category</source>
+                <target>Editar Categoría</target>
+            </trans-unit>
+             <trans-unit id="22">
+                <source>New SubCategory</source>
+                <target>Nueva Sub Categoría</target>
+             </trans-unit>
+
+             <trans-unit id="23">
+                <source>Edit SubCategory</source>
+                <target>Editar Sub Categoría</target>
+             </trans-unit>
+
+             <trans-unit id="24">
+                <source>Category</source>
+                <target>Categoría</target>
+             </trans-unit>
+
+             <trans-unit id="25">
+                <source>Back to the list</source>
+                <target>Volver a la lista</target>
+             </trans-unit>
+             <trans-unit id="26">
+                 <source>SubCategory</source>
+                 <target>Sub Categoría</target>
+             </trans-unit>
+
+             <trans-unit id="27">
+                 <source>Delete</source>
+                 <target>Eliminar</target>
+             </trans-unit>
+             <trans-unit id="28">
+                 <source>New State</source>
+                 <target>Nuevo Estado</target>
+             </trans-unit>
+
+             <trans-unit id="29">
+                  <source>Status</source>
+                  <target>Estado</target>
+             </trans-unit>
+
+             <trans-unit id="30">
+                  <source>States List</source>
+                  <target>Lista de Estados</target>
+             </trans-unit>
+
+             <trans-unit id="31">
+                  <source>States</source>
+                  <target>Estados</target>
+             </trans-unit>
+
+             <trans-unit id="32">
+                  <source>Id State</source>
+                  <target>Id de Estado</target>
+             </trans-unit>
+
+             <trans-unit id="33">
+                  <source>Edit State</source>
+                  <target>Editar estado</target>
+             </trans-unit>
+
+             <trans-unit id="34">
+                  <source>Create a new entry</source>
+                  <target>Crear un nuevo registro</target>
+             </trans-unit>
+        </body>
+    </file>
+</xliff>

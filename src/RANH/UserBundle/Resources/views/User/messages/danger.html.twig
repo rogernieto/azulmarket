@@ -1,0 +1,23 @@
+
+{# tiene el mensaje de usuario, si no existe la variable flashMessage (cuando de usa ajax) que le de el estilo a la variable user- message#}
+{% if flashMessage is not defined %}
+	<div class="alert alert-danger hidden" id="message-danger" role="alert" > </hidden>
+		<div class="container">
+			<span id="user-message-danger">
+			</span>
+		</div>
+	</div>
+{% endif %}
+
+
+
+
+
+<!-- PONER EL MENSAJE DE EXITO -->
+{% for flashMessage in app.session.flashbag.get('mensaje') %}
+	<div class="alert alert-danger" role="alert">
+		<div class="container">
+			{{ flashMessage }} 
+		</div>
+	</div>
+{% endfor %}

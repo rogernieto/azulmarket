@@ -1,0 +1,30 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="main container" style="width: 40%; margin-top: 5%">
+        <div class="row well">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h2>{{ 'New State'|trans }}</h2>
+                </div>
+                {{ form_start(form, {'attr':{'role':'form'}}) }}
+
+                <fieldset>
+                    <div class="form-group">
+                        {{ form_label(form.status) }}
+                        {{ form_widget(form.status, {'attr':{'class':'form-control', 'placeholder':'New SubCategory'}}) }}
+                    </div>
+                    <br/>
+                    <p>
+                        {{ form_widget(form.save, {'label' : 'Crear SubCategoria', 'attr': { 'class':'btn btn-success' }}) }}
+                    </p>
+                </fieldset>
+
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,148 @@
+<!--header-->
+<div class="header">
+    <div class="heder-bottom">
+        <div class="container">
+            <div class="logo-nav">
+                <div class="logo-nav-left">
+                    <h1><a href="{{ path('ranh_user_homepage') }}">Azul Market <span>Subastas en línea</span></a></h1>
+                </div>
+                <div class="logo-nav-left1">
+                    <nav class="navbar navbar-default">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header nav_2">
+                            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div> 
+                        <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="{{ path('ranh_user_homepage')}}" class="act">Home</a></li>    
+                                
+                                <!-- Mega Menu -->
+                                {% if app.user.role == "ROLE_ADMIN"%}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administración<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-9  multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Usuarios</h6>
+                                                    <li><a href="{{ path('ranh_user_index') }}">Lista de Usuarios</a></li>
+                                                    <li><a href="{{ path('ranh_user_add') }}">Nuevo Usuario</a></li>
+                                                </ul>
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Categorías</h6>
+                                                    <li><a href="{{ path('category') }}">Lista Categorías</a></li>
+                                                    <li><a href="{{ path('category_new') }}">Nueva Categoría</a></li>
+                                                </ul>
+
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>SubCategorías</h6>
+                                                    <li><a href="{{ path('subcategory') }}">Lista SubCategorías</a></li>
+                                                    <li><a href="{{ path('subcategory_new') }}">Nueva SubCategoría</a></li>
+                                                </ul>
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Estados de artículos</h6>
+                                                    <li><a href="{{ path('state') }}">Lista Estados</a></li>
+                                                    <li><a href="{{ path('state_new') }}">Nuevo Estado</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        
+                                    </ul>
+                                </li>
+                                
+                                {% endif %}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tecnología<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <div class="row">
+                                            <div class="col-sm-9  multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Tecnología</h6>
+                                                    <li><a href="#">Teléfonos</a></li>
+                                                    <li><a href="#">Accesorios</a></li>
+                                                    <li><a href="#">Tablets</a></li>
+                                                    <li><a href="#">Consolas - Videojuegos</a></li>
+                                                    <li><a href="#">Computadoras - Laptops</a></li>
+                                                    <li><a href="#">TV - Audio - Video</a></li>
+                                                    <li><a href="#">Cámaras y accesorios</a></li>
+
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Casa<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <div class="row">
+                                            <div class="col-sm-9  multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Casa - Muebles</h6>
+                                                    <li><a href="#">Electrodomésticos</a></li>
+                                                    <li><a href="#">Muebles</a></li>
+                                                    <li><a href="#">Almacenes y Oficinas</a></li>
+                                                    <li><a href="#">Decoración</a></li>
+                                                    <li><a href="#">Jardín - Accesorios</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vehículos<b class="caret"></b></a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <div class="row">
+                                            <div class="col-sm-9  multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <h6>Vehículos</h6>
+                                                    <li><a href="#">Autos</a></li>
+                                                    <li><a href="#">Accesorios para Autos</a></li>
+                                                    <li><a href="#">Motos</a></li>
+                                                    <li><a href="#">Camiones - Vehículos Comerciales</a></li>
+                                                    <li><a href="#">Otros</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="top-right">Vender!</a>
+                                 
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header-right2">                
+
+                    <h3> <div class="total">
+                        <a href="{{ path('ranh_user_logout') }}" class="act"> Logout</a>   
+                    </div>
+
+                </h3>
+            </div>
+
+            </a>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+</div>
+</div>
+<!--header-->

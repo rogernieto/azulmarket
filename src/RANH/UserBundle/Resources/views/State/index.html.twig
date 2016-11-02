@@ -1,0 +1,52 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="page-header margin-none">
+                <h2 class="padding-none">{{ 'States List'|trans }}</h2>
+            </div>
+            <div class="table responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                        <th>{{ knp_pagination_sortable(pagination, 'Id', 'entity.id') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Name', 'entity.status') }}</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for entity in pagination %}
+                        <tr>
+                            <td>{{ entity.id }}</td>
+                            <td>{{ entity.status }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('state_show', { 'id': entity.id }) }}" class="btn btn-sm btn-info">Ver</a>
+
+                                        <a href="{{ path('state_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-primary">Editar</a>
+
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                {#Display Navigation#}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+            <p>
+                <a href="{{ path('state_new') }}" class="btn btn-sm btn-success">
+                    {{ 'Create a new entry'|trans }}
+                </a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

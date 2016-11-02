@@ -1,0 +1,30 @@
+subcategory:
+    path:     /
+    defaults: { _controller: "RANHUserBundle:SubCategory:index" }
+
+subcategory_show:
+    path:     /{id}/show
+    defaults: { _controller: "RANHUserBundle:SubCategory:show" }
+
+subcategory_new:
+    path:     /new
+    defaults: { _controller: "RANHUserBundle:SubCategory:new" }
+
+subcategory_create:
+    path:     /create
+    defaults: { _controller: "RANHUserBundle:SubCategory:create" }
+    methods:  POST
+
+subcategory_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RANHUserBundle:SubCategory:edit" }
+
+subcategory_update:
+    path:     /{id}/update
+    defaults: { _controller: "RANHUserBundle:SubCategory:update" }
+    methods:  [POST, PUT]
+
+subcategory_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RANHUserBundle:SubCategory:delete" }
+    methods:  [POST, DELETE]

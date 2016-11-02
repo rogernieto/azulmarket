@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Azul Market{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('public/css/style.css') }}">
+        <!--css-->
+        <link href="{{ asset('public/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all"/>
+        <link href="{{ asset('public/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{ asset('public/css/font-awesome.css') }}" rel="stylesheet">
+        <!--css-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="New Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+        <link href='//fonts.googleapis.com/css?family=Cagliostro' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+        <link href="{{ asset('public/css/coreSlider.css') }}" rel="stylesheet" type="text/css">
+
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% block javascripts %}
+        <!--search jQuery-->
+        <script src="{{ asset('public/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('public/js/jquery-3.1.1.min.js') }}"></script>        
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('public/js/bootbox.min.js') }}"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="{{ asset('public/js/main.js') }}"></script>
+        <script src="{{ asset('public/js/coreSlider.js') }}"></script>
+
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {{ include('menu.html.twig') }}
+        {% endif %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="main container" style="width: 40%; margin-top: 5%">
+        <div class="row well">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h2>{{ 'Edit State'|trans }}</h2>
+                </div>
+                {{ form_start(edit_form, {'attr':{'role':'form'}}) }}
+
+                <fieldset>
+                    <div class="form-group">
+                        {{ form_label(edit_form.status) }}
+                        {{ form_widget(edit_form.status, {'attr':{'class':'form-control', 'placeholder':'State'}}) }}
+                    </div>
+                    <br/>
+                    <p>
+                        {{ form_widget(edit_form.save, {'label' : 'Actualizar SubCategoría', 'attr': { 'class':'btn btn-success' }}) }}
+                    </p>
+                </fieldset>
+                {{ form_end(edit_form) }}
+                <br/>
+
+                <ul class="record_actions">
+                    <li>
+                        <a href="{{ path('subcategory') }}">
+                            {{ 'Back to the list'|trans }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

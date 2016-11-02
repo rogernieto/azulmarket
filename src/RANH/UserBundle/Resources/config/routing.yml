@@ -1,0 +1,33 @@
+ranh_user_state:
+    resource: "@RANHUserBundle/Resources/config/routing/state.yml"
+    prefix:   /state
+
+ranh_user_category:
+    resource: "@RANHUserBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+ranh_user_subcategory:
+    resource: "@RANHUserBundle/Resources/config/routing/subcategory.yml"
+    prefix:   /subcategory
+
+ranh_user_user:
+  resource: "@RANHUserBundle/Resources/config/routes/user.yml"
+  prefix: /user
+
+
+#Authentication 
+ranh_user_homepage:
+#agarrando una ruta raiz que debe corresponder a la ruta raiz 
+  path: 		/
+  defaults: 	{ _controller: RANHUserBundle:User:home }
+
+ranh_user_login: 
+  path: 		/login 
+  defaults: 	{ _controller: RANHUserBundle:Security:login }
+
+ranh_user_login_check: 
+  path: 		/login_check
+  defaults: 	{ _controller: RANHUserBundle:Security:loginCheck }
+
+ranh_user_logout:
+  path: 		/logout
