@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f866dae4-d16a-49fb-b1d2-71a3459c3c84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Entity/State.php" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Entity/State.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Entity/SubCategory.php" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Entity/SubCategory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/translations/messages.es.xlf" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/translations/messages.es.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/State/index.html.twig" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/State/index.html.twig" />
     </list>
     <ignored path="azulmarket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,8 +71,8 @@
       <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/Article/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state relative-caret-position="108">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding>
                 <element signature="e#12#28#0#Twig" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -521,12 +514,20 @@
       <workItem from="1478148618548" duration="773000" />
       <workItem from="1478149408128" duration="78000" />
       <workItem from="1478149863001" duration="603000" />
-      <workItem from="1478292143606" duration="3991000" />
+      <workItem from="1478292143606" duration="4060000" />
     </task>
+    <task id="LOCAL-00001" summary="Inicio de Modulo artículo">
+      <created>1478296174613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478296174613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68357000" />
+    <option name="totallyTimeSpent" value="68426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1279" y="45" width="1368" height="741" extended-state="6" />
@@ -561,6 +562,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Inicio de Modulo artículo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicio de Modulo artículo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -965,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/Article/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="108">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding>
             <element signature="e#12#28#0#Twig" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
