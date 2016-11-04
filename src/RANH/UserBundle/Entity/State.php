@@ -116,4 +116,10 @@ class State
     {
         return $this->articles;
     }
+
+    public function __toString()
+    {
+        return $this->status; // if you have a name property you can do $this->getName();
+    }
+
 }
