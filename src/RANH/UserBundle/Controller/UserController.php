@@ -16,7 +16,10 @@ class UserController extends Controller
 
     public function homeAction()
     {
+
+
         return $this->render('RANHUserBundle:User:home.html.twig');
+
     }
 
 

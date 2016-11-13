@@ -214,6 +214,9 @@ class Article
 
 
 
-
+    public function __toString()
+    {
+        return $this->name; // if you have a name property you can do $this->getName();
+    }
 
 }
