@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f866dae4-d16a-49fb-b1d2-71a3459c3c84" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/public/js/delete-user.js" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/public/js/delete-user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/translations/messages.es.xlf" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/translations/messages.es.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/Article/subcategorias.html.twig" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/Article/subcategorias.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/State/edit.html.twig" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/State/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/RANH/UserBundle/Resources/views/User/index.html.twig" />
     </list>
     <ignored path="azulmarket.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -604,7 +598,7 @@
       <workItem from="1478990829757" duration="4438000" />
       <workItem from="1479139347303" duration="7311000" />
       <workItem from="1479159013762" duration="2553000" />
-      <workItem from="1479258396074" duration="11670000" />
+      <workItem from="1479258396074" duration="11698000" />
     </task>
     <task id="LOCAL-00001" summary="Inicio de Modulo artículo">
       <created>1478296174613</created>
@@ -634,11 +628,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479008149936</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Guardar articulo completado (aun sin imagen)">
+      <created>1479271054498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479271054498</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171179000" />
+    <option name="totallyTimeSpent" value="171207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
@@ -678,7 +679,8 @@
     <MESSAGE value="Inicio de Modulo artículo" />
     <MESSAGE value="Opción categoría agregado, falta validar choice subcategoría" />
     <MESSAGE value="Categoría con subcategoría anidado en Nuevo articulo!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Categoría con subcategoría anidado en Nuevo articulo!" />
+    <MESSAGE value="Guardar articulo completado (aun sin imagen)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Guardar articulo completado (aun sin imagen)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -866,6 +868,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
