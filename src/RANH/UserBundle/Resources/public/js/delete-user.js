@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 		//con el metodo data vamos a recuperar el id de tr
 		var id = row.data('id');
-	//			alert(id);	
+		//alert(id);
 		//obtenemos el form 
 		var form = $('#form-delete');
 

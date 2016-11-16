@@ -53,3 +53,4 @@ security:
         - { path: ^/subcategory, roles: ROLE_ADMIN }
         - { path: ^/category, roles: ROLE_ADMIN }
         - { path: ^/state, roles: ROLE_ADMIN }
+        - { path: ^/article, roles: IS_AUTHENTICATED_FULLY }

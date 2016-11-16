@@ -72,7 +72,6 @@
                 <target>Descripción</target>
             </trans-unit>
 
-
             <trans-unit id="17">
                 <source>Create Category</source>
                 <target>Crear Categoría</target>
@@ -162,6 +161,18 @@
              <trans-unit id="35">
                   <source>New Article</source>
                   <target>Nuevo Artículo</target>
+             </trans-unit>
+             <trans-unit id="36">
+                  <source>Subcategories</source>
+                  <target>Subcategorías</target>
+             </trans-unit>
+             <trans-unit id="37">
+                  <source>Articles List</source>
+                  <target>Lista de Artículos</target>
+             </trans-unit>
+             <trans-unit id="38">
+                  <source>Edit Article</source>
+                  <target>Edición del artículo</target>
              </trans-unit>
         </body>
     </file>
