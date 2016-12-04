@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+    <div class="main container" style="width: 40%; margin-top: 5%">
+        <div class="row well">
+            <div class="col-md-9">
+                <div class="page-header">
+                    <h2>Edita tu anuncio</h2>
+                </div>
+
+                {{ form_start(edit_form, {'attr':{'role':'form'}}) }}
+
+                <fieldset>
+                    {{ form_label(edit_form.article) }}
+                    {{ form_widget(edit_form.article) }}
+
+                    {{ form_label(edit_form.title) }}
+                    {{ form_widget(edit_form.title) }}
+
+                    {{ form_label(edit_form.description) }}
+                    {{ form_widget(edit_form.description) }}
+
+                    {{ form_label(edit_form.initialDate) }}
+                    {{ form_widget(edit_form.initialDate) }}
+
+                    {{ form_label(edit_form.finalDate) }}
+                    {{ form_widget(edit_form.finalDate) }}
+                </fieldset>
+
+                {{ form_end(edit_form) }}
+
+            </div>
+
+            <div class="col-md-3">
+                <a href="{{ path('ad') }}">
+                    Volver
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

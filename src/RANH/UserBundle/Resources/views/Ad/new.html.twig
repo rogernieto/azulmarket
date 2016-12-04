@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+
+    <div class="main container" style="width: 40%; margin-top: 5%">
+        <div class="row well">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h2> Condiciones de la subasta </h2>
+                </div>
+                {{ form_start(form) }}
+
+
+                {{ form_label(form.title) }}
+                {{ form_widget(form.title, {'attr': { 'class':'form-control' }}) }}
+
+                {{ form_label(form.description) }}
+
+                {{ form_widget(form.description, {'attr': { 'class':'form-control', 'style':'resize:none ; height:100px'}}) }}
+
+                <div class="hidden">
+                {{ form_label(form.user) }}
+                {{ form_widget(form.user, {'attr': { 'class':'form-control'},'value': app.user.id ~ "" })}}
+
+                {{ form_label(form.article) }}
+                {{ form_widget(form.article, {'attr': { 'class':'form-control'},'value': roger.id ~ "" }) }}
+                </div>
+                <br>
+
+                {{ form_label(form.initialDate) }}
+                    {{ form_widget(form.initialDate) }}
+                <br>
+                {{ form_label(form.finalDate) }}
+                {{ form_widget(form.finalDate) }}
+                <br><br><br>
+
+
+                {{ form_widget(form.save, {'label' : 'Publicar', 'attr': { 'class':'btn btn-success' }}) }}
+
+                {{ form_end(form) }}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,71 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="container well" style="width: 40%; margin-top: 5%" >
+        <div class="col-md-8">
+            <dl>
+                <dt>Id</dt>
+                <dd>
+                    {{ entity.id }}
+                    &nbsp;
+                </dd>
+                <br/>
+                <dt>Título</dt>
+                <dd>
+                    {{ entity.title }}
+                </dd>
+
+                <br/>
+                <dt>Descripción</dt>
+                <dd>
+                    {{ entity.description }}
+                    &nbsp;
+                </dd>
+                <br/>
+                <dt>Vendedor </dt>
+                <dd>
+                    {{ entity.user }}
+                </dd>
+                <br/>
+                <dt>Artículo</dt>
+                <dd>
+                    {{ entity.article }}
+                </dd>
+                <br/>
+                <dt>Inicio de la subasta</dt>
+                <dd>
+                    {{ entity.initialDate|date('Y-m-d H:i:s') }}
+                </dd>
+                <br/>
+                <dt>Fin de la subasta</dt>
+                <dd>
+                    {{ entity.finalDate|date('Y-m-d H:i:s') }}
+                </dd>
+                <br/>
+            </dl>
+        </div>
+
+        <div class="col-md-4">
+            <h3>{{ 'Acciones'}}:</h3>
+            <p>
+                <a href="{{ path('ad_edit', { id: entity.id }) }}" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    {{ 'Editar Anuncio' }}
+                </a>
+            </p>
+            <br/>
+            <p>
+                {{ form(delete_form) }}
+            </p>
+            <br/>
+            <p>
+                <a href="{{ path('ad') }}" class="btn btn-default">
+                    Back to the list
+                </a>
+            </p>
+        </div>
+
+    </div>
+{% endblock %}

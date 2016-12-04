@@ -1,0 +1,50 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="page-header margin-none">
+                <h2 class="padding-none">¡Tus anuncios!</h2>
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped table-hover" >
+                    <thead>
+                    <tr>
+                        <th>{{ knp_pagination_sortable(pagination, 'Titulo','entity.Title' ) }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Descripción','entity.Description') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Artículo','entity.ArticleId') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Inicia','entity.InitialDate') }}</th>
+                        <th>{{ knp_pagination_sortable(pagination, 'Termina','entity.FinalDate') }}</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for entity in pagination %}
+                        <tr>
+                            <td>{{ entity.title }}</td>
+                            <td>{{ entity.description }}</td>
+                            <td>{{ entity.article }}</td>
+                            <td>{% if entity.initialDate %}{{ entity.initialDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>{% if entity.finalDate %}{{ entity.finalDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>
+
+                                        <a href="{{ path('ad_show', { 'id': entity.id }) }}" class="btn btn-sm btn-info">Detalles</a>
+                                        <a href="{{ path('ad_edit', { 'id': entity.id }) }}" class="btn btn-sm btn-primary">Editar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                {#Display Navigation#}
+                <div class="navigation">
+                    {{ knp_pagination_render(pagination) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

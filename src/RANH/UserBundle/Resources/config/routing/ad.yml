@@ -1,0 +1,30 @@
+ad:
+    path:     /
+    defaults: { _controller: "RANHUserBundle:Ad:index" }
+
+ad_show:
+    path:     /{id}/show
+    defaults: { _controller: "RANHUserBundle:Ad:show" }
+
+ad_new:
+    path:     /{roger}/new
+    defaults: { _controller: "RANHUserBundle:Ad:new" }
+
+ad_create:
+    path:     /create
+    defaults: { _controller: "RANHUserBundle:Ad:create" }
+    methods:  POST
+
+ad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "RANHUserBundle:Ad:edit" }
+
+ad_update:
+    path:     /{id}/update
+    defaults: { _controller: "RANHUserBundle:Ad:update" }
+    methods:  [POST, PUT]
+
+ad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "RANHUserBundle:Ad:delete" }
+    methods:  [POST, DELETE]
