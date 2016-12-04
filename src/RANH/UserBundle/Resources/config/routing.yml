@@ -1,3 +1,7 @@
+ranh_user_ad:
+    resource: "@RANHUserBundle/Resources/config/routing/ad.yml"
+    prefix:   /ad
+
 ranh_user_article:
     resource: "@RANHUserBundle/Resources/config/routing/article.yml"
     prefix:   /article

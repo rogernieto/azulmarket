@@ -174,6 +174,14 @@
                   <source>Edit Article</source>
                   <target>Edición del artículo</target>
              </trans-unit>
+             <trans-unit id="39">
+                  <source>Ad Creation</source>
+                  <target>Creación del anuncio</target>
+             </trans-unit>
+             <trans-unit id="40">
+                  <source>Title</source>
+                  <target>Título</target>
+             </trans-unit>
         </body>
     </file>
 </xliff>
