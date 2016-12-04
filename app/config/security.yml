@@ -55,3 +55,4 @@ security:
         - { path: ^/state, roles: ROLE_ADMIN }
         - { path: ^/article, roles: IS_AUTHENTICATED_FULLY }
         - { path: ^/ad, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/lista, roles: IS_AUTHENTICATED_FULLY }

@@ -1,0 +1,47 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+
+<div class="container well"  style="width: 50%; margin-top: 5%">
+    <div class="col-md-9">
+
+            <dl>
+
+                <dt>Name</dt>
+                <dd> {{ entity.name }} </dd>
+                <br>
+                <dt>Description</dt>
+                <dd> {{ entity.description }} </dd>
+                <br>
+                <dt>State </dt>
+                <dd> {{ entity.state }}</dd>
+                <br>
+                <dt>SubCategory Id</dt>
+                <dd> {{ entity.subcategories }}</dd>
+            </dl>
+            <br/>
+        </div>
+        <div class="col-md-3">
+            <h3>{{ 'Acciones'}}</h3>
+            <p>
+                <a href="{{ path('article_edit', { id: entity.id }) }}" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-edit"></span>
+                    {{ 'Editar Artículo' }}
+                </a>
+            </p>
+            <br/>
+            <p>
+                {{ form(delete_form) }}
+            </p>
+            <br/>
+            <p>
+                <a href="{{ path('article') }}" class="btn btn-default">
+                    {{ 'Back to the list'|trans }}
+                </a>
+            </p>
+        </div>
+
+    </div>
+{% endblock %}

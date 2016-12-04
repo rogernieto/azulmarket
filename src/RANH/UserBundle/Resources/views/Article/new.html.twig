@@ -1,0 +1,83 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+
+    <div class="main container" style="width: 40%; margin-top: 5%">
+        <div class="row well">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h3>Paso 1</h3>
+                    <h2>{{ 'New Article'|trans }}</h2>
+                </div>
+                {{ form_start(form, {'attr':{'role':'form'}}) }}
+
+                <fieldset>
+                    <div id="fnew" class="form-group">
+                        {{ form_label(form.name) }}
+                        {{ form_widget(form.name, {'attr':{'class':'form-control', 'placeholder':'Nombre del artículo'}}) }}
+
+                        {{ form_label(form.description) }}
+                        {{ form_widget(form.description, {'attr': {'class':'form-control', 'placeholder':'Describe tu artículo'}}) }}
+
+                        {{ form_label(form.state) }}
+                        {{ form_widget(form.state, {'attr': { 'class': 'form-control' }} ) }}
+
+                        <label for="id_cate">Categoría</label>
+                        <select class="form-control" id="id_categoria" name="id_categoria">
+                            <option selected> Seleccione una categoría</option>
+                            {% for cat in categorias %}
+                                <option value="{{ cat.id }}"> {{ cat|raw }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <br>
+                        {{ form_label(form.subcategories) }}
+                        {{ form_widget(form.subcategories,{'attr': { 'class':'form-control', 'disabled':'true' },  'id':'id_subcategoria' }) }}
+                        <br>
+
+                        {{ form_widget(form.save, {'label' : 'Siguiente', 'attr': { 'class':'btn btn-success' }}) }}
+
+                        <p>
+                            <br/>
+                        </p>
+
+
+                    </div>
+                </fieldset>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+
+        $(function(){
+            $("#id_categoria").change(function(){
+                var data = {
+                    categoria_id: $(this).val()
+                };
+
+                $("#id_subcategoria").change(function() {
+                   var datados = { subcate: $(this).val() };
+                });
+
+                $.ajax({
+                    type: 'post',
+                    url: '{{ path("article_ajax") }}',
+                    data: data,
+                    success: function(data) {
+                        $('#id_subcategoria').prop('disabled','false');
+                        $('#id_subcategoria').removeAttr('disabled');
+                        $('#id_subcategoria').html(data);
+                    }
+                });
+            });
+        });
+
+    </script>
+{% endblock %}

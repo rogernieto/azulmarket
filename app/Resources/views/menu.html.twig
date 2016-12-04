@@ -16,47 +16,47 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                        </div> 
+                        </div>
                         <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="{{ path('ranh_user_homepage')}}" class="act">Home</a></li>    
-                                
+                                <li class="active"><a href="{{ path('ranh_user_homepage')}}" class="act">Home</a></li>
+
                                 <!-- Mega Menu -->
                                 {% if app.user.role == "ROLE_ADMIN"%}
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administración<b class="caret"></b></a>
-                                    <ul class="dropdown-menu multi-column columns-3">
-                                        
-                                        <div class="row">
-                                            <div class="col-sm-9  multi-gd-img">
-                                                <ul class="multi-column-dropdown">
-                                                    <h6>Usuarios</h6>
-                                                    <li><a href="{{ path('ranh_user_index') }}">Lista de Usuarios</a></li>
-                                                    <li><a href="{{ path('ranh_user_add') }}">Nuevo Usuario</a></li>
-                                                </ul>
-                                                <ul class="multi-column-dropdown">
-                                                    <h6>Categorías</h6>
-                                                    <li><a href="{{ path('category') }}">Lista Categorías</a></li>
-                                                    <li><a href="{{ path('category_new') }}">Nueva Categoría</a></li>
-                                                </ul>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administración<b class="caret"></b></a>
+                                        <ul class="dropdown-menu multi-column columns-3">
 
-                                                <ul class="multi-column-dropdown">
-                                                    <h6>SubCategorías</h6>
-                                                    <li><a href="{{ path('subcategory') }}">Lista SubCategorías</a></li>
-                                                    <li><a href="{{ path('subcategory_new') }}">Nueva SubCategoría</a></li>
-                                                </ul>
-                                                <ul class="multi-column-dropdown">
-                                                    <h6>Estados de artículos</h6>
-                                                    <li><a href="{{ path('state') }}">Lista Estados</a></li>
-                                                    <li><a href="{{ path('state_new') }}">Nuevo Estado</a></li>
-                                                </ul>
+                                            <div class="row">
+                                                <div class="col-sm-9  multi-gd-img">
+                                                    <ul class="multi-column-dropdown">
+                                                        <h6>Usuarios</h6>
+                                                        <li><a href="{{ path('ranh_user_index') }}">Lista de Usuarios</a></li>
+                                                        <li><a href="{{ path('ranh_user_add') }}">Nuevo Usuario</a></li>
+                                                    </ul>
+                                                    <ul class="multi-column-dropdown">
+                                                        <h6>Categorías</h6>
+                                                        <li><a href="{{ path('category') }}">Lista Categorías</a></li>
+                                                        <li><a href="{{ path('category_new') }}">Nueva Categoría</a></li>
+                                                    </ul>
+
+                                                    <ul class="multi-column-dropdown">
+                                                        <h6>SubCategorías</h6>
+                                                        <li><a href="{{ path('subcategory') }}">Lista SubCategorías</a></li>
+                                                        <li><a href="{{ path('subcategory_new') }}">Nueva SubCategoría</a></li>
+                                                    </ul>
+                                                    <ul class="multi-column-dropdown">
+                                                        <h6>Estados de artículos</h6>
+                                                        <li><a href="{{ path('state') }}">Lista Estados</a></li>
+                                                        <li><a href="{{ path('state_new') }}">Nuevo Estado</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clearfix"></div>
                                             </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        
-                                    </ul>
-                                </li>
-                                
+
+                                        </ul>
+                                    </li>
+
                                 {% endif %}
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tecnología<b class="caret"></b></a>
@@ -75,7 +75,7 @@
 
                                                 </ul>
                                             </div>
-                                            
+
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
@@ -94,7 +94,7 @@
                                                     <li><a href="#">Jardín - Accesorios</a></li>
                                                 </ul>
                                             </div>
-                                            
+
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
@@ -113,14 +113,32 @@
                                                     <li><a href="#">Otros</a></li>
                                                 </ul>
                                             </div>
-                                            
+
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href={{ path('article_new') }} class="top-right">Vender!</a>
-                                 
+
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        Mis anuncios <b class="caret">
+                                        </b>
+                                    </a>
+                                    <ul class="dropdown-menu multi-column columns-3">
+                                        <div class="row">
+                                            <div class="col-sm-9 multi-gd-img">
+                                                <ul class="multi-column-dropdown">
+                                                    <li><a href="{{ path('article') }}">Mis artículos</a> </li>
+                                                    <li><a href="{{ path('ad') }}">Mis subastas</a> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </ul>
+
                                 </li>
 
 
@@ -128,21 +146,21 @@
                         </div>
                     </nav>
                 </div>
-                <div class="header-right2">                
+                <div class="header-right2">
 
                     <h3> <div class="total">
-                        <a href="{{ path('ranh_user_logout') }}" class="act"> Logout</a>   
-                    </div>
+                            <a href="{{ path('ranh_user_logout') }}" class="act"> Logout</a>
+                        </div>
 
-                </h3>
+                    </h3>
+                </div>
+
+                </a>
+                <div class="clearfix"> </div>
             </div>
-
-            </a>
             <div class="clearfix"> </div>
         </div>
-        <div class="clearfix"> </div>
     </div>
-</div>
 </div>
 </div>
 <!--header-->
