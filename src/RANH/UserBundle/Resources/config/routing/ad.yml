@@ -28,3 +28,8 @@ ad_delete:
     path:     /{id}/delete
     defaults: { _controller: "RANHUserBundle:Ad:delete" }
     methods:  [POST, DELETE]
+
+lista:
+    path:     /{id}
+    defaults: { _controller: "RANHUserBundle:Ad:obtenerLista"}
+    methods:  [GET]

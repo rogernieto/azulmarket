@@ -1,8 +1,26 @@
-{% extends(layout.html.twig) %}
+{% extends('layout.html.twig') %}
 
 
 {% block body %}
     {{ parent() }}
+
+    <div class="container well" style="width: 50%; margin-top: 5%">
+        <div class="col-md-9">
+
+            {% for anuncio in anuncios %}
+               <b> <a href="#"> {{ anuncio.title  }}</a> </b>
+                <p> {{ anuncio.name }}</p>
+                <p> {{  anuncio.status }}</p>
+                <p> {{ "Fecha inicial: " }} {{ anuncio.initialDate|date }}</p>
+                <p> {{ "Fecha final: " }} {{ anuncio.finalDate|date }}</p>
+
+                -----------------------------------------------------------------------------------
+            {% endfor %}
+
+        </div>
+    </div>
+
+
 
 
 

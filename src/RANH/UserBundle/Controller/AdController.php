@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use RANH\UserBundle\Entity\Ad;
 use RANH\UserBundle\Form\AdType;
+use Symfony\Component\Validator\Mapping\ElementMetadata;
 
 /**
  * Ad controller.
@@ -227,5 +228,22 @@ class AdController extends Controller
             ->add('submit', 'submit', array('label' => 'Delete'))
             ->getForm()
         ;
+    }
+
+
+    public function obtenerListaAction($id)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $anuncios = $em->getRepository('RANHUserBundle:Article')->subasta($id);
+        $estado = $em->getRepository('RANHUserBundle:Article')->subasta($id);
+
+        return $this->render('RANHUserBundle:Ad:lista.html.twig', array(
+            'anuncios' => $anuncios
+
+        ));
+
+
     }
 }
