@@ -4,17 +4,22 @@
 {% block body %}
     {{ parent() }}
 
-    <div class="container well" style="width: 50%; margin-top: 5%">
-        <div class="col-md-9">
+    <div  class="container well" style="width: 70%;  margin-top: 5%">
+        <div class="col-md-12">
 
             {% for anuncio in anuncios %}
-               <b> <a href="#"> {{ anuncio.title  }}</a> </b>
-                <p> {{ anuncio.name }}</p>
-                <p> {{  anuncio.status }}</p>
-                <p> {{ "Fecha inicial: " }} {{ anuncio.initialDate|date }}</p>
-                <p> {{ "Fecha final: " }} {{ anuncio.finalDate|date }}</p>
-
-                -----------------------------------------------------------------------------------
+                <div style=" border:1px solid; padding: 10px 10px; margin-bottom: 5px;height: 150px; width:100% ;background-color:white ; border-radius: 10px ;  border-color:#D8D8D8 " >
+                    <div class="col-md-5">
+                        <b> <a href="{{ path('ad_show', { 'id': anuncio.id }) }}"> {{ anuncio.title  }}</a> </b>
+                        <p> {{ anuncio.name }}</p>
+                        <p> {{  anuncio.status }}</p>
+                        <p> {{ "Fecha inicial: " }} {{ anuncio.initialDate|date }}</p>
+                        <p> {{ "Fecha final: " }} {{ anuncio.finalDate|date }}</p>
+                    </div>
+                    <div align="right">
+                        <img  width="150px" src="{{ asset('public/images/product.png') }}"/>
+                    </div>
+                </div>
             {% endfor %}
 
         </div>

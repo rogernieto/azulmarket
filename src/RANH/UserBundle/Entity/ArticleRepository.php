@@ -17,7 +17,7 @@ class ArticleRepository extends EntityRepository
     {
         $em = $this->getEntityManager();
 
-        $dql = "SELECT a.title, a.initialDate, a.finalDate, art.name , s.status
+        $dql = "SELECT a.id, a.title, a.initialDate, a.finalDate, art.name , s.status
           FROM RANHUserBundle:Ad a 
           JOIN RANHUserBundle:Article art
           WHERE a.articleId = art.id
