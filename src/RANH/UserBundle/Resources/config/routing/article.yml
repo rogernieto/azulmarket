@@ -1,6 +1,7 @@
 article:
-    path:     /
+    path:     /{id}
     defaults: { _controller: "RANHUserBundle:Article:index" }
+    methods:  [GET]
 
 article_show:
     path:     /{id}/show

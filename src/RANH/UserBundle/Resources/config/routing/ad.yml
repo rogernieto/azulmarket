@@ -1,7 +1,7 @@
 ad:
-    path:     /
+    path:     /{id}
     defaults: { _controller: "RANHUserBundle:Ad:index" }
-
+    methods:  GET
 ad_show:
     path:     /{id}/show
     defaults: { _controller: "RANHUserBundle:Ad:show" }

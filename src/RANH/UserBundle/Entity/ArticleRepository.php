@@ -33,4 +33,20 @@ class ArticleRepository extends EntityRepository
         return $subcateg;
     }
 
+    public function findByUserId($idU)
+    {
+        $em = $this->getEntityManager();
+
+        $dql = "SELECT art 
+          FROM RANHUserBundle:Article art 
+          JOIN RANHUserBundle:Ad ad
+          WHERE ad.userId = :idU 
+          AND art.id = ad.articleId";
+        $query = $em->createQuery($dql);
+        $query->setParameter('idU', $idU);
+        $art= $query->getResult();
+
+        return $art;
+    }
+
 }

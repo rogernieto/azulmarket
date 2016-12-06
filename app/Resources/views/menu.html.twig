@@ -131,8 +131,8 @@
                                         <div class="row">
                                             <div class="col-sm-9 multi-gd-img">
                                                 <ul class="multi-column-dropdown">
-                                                    <li><a href="{{ path('article') }}">Mis artículos</a> </li>
-                                                    <li><a href="{{ path('ad') }}">Mis subastas</a> </li>
+                                                    <li><a href="{{ path('article', {'id': app.user.id }) }}">Mis artículos</a> </li>
+                                                    <li><a href="{{ path('ad', {'id': app.user.id })}}">Mis subastas</a> </li>
                                                 </ul>
                                             </div>
                                         </div>

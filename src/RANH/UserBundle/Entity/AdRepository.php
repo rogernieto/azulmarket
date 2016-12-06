@@ -12,4 +12,22 @@ use Doctrine\ORM\EntityRepository;
  */
 class AdRepository extends EntityRepository
 {
+
+    public function findByUserId($idU)
+    {
+        $em = $this->getEntityManager();
+
+        $dql = "SELECT ad 
+          FROM RANHUserBundle:Article art 
+          JOIN RANHUserBundle:Ad ad
+          WHERE ad.userId = :idU 
+          AND art.id = ad.articleId";
+        $query = $em->createQuery($dql);
+        $query->setParameter('idU', $idU);
+        $ad= $query->getResult();
+
+        return $ad;
+    }
+
+
 }

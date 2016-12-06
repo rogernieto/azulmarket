@@ -20,15 +20,15 @@ class AdController extends Controller
      * Lists all Ad entities.
      *
      */
-    public function indexAction(Request $request)
+    public function indexAction( $id , Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('RANHUserBundle:Ad')->findAll();
+        $entities = $em->getRepository('RANHUserBundle:Ad')->findByUserId($id);
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
-            $entities, $request->query->getInt('page',1),
+            $entities, $request->query->getInt('pa  ge',1),
             5
         );
 
@@ -237,8 +237,6 @@ class AdController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $anuncios = $em->getRepository('RANHUserBundle:Article')->subasta($id);
-        $estado = $em->getRepository('RANHUserBundle:Article')->subasta($id);
-
         return $this->render('RANHUserBundle:Ad:lista.html.twig', array(
             'anuncios' => $anuncios
 

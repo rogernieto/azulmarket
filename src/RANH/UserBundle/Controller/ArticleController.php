@@ -23,18 +23,17 @@ class ArticleController extends Controller
      * Lists all Article entities.
      *
      */
-    public function indexAction(Request $request)
+    public function indexAction( Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('RANHUserBundle:Article')->findAll();
+        $entities = $em->getRepository('RANHUserBundle:Article')->findByUserId($id);
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $entities, $request->query->getInt('page',1),
             5
         );
-
 
         return $this->render('RANHUserBundle:Article:index.html.twig', array(
             'pagination' => $pagination,
