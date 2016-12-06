@@ -30,6 +30,6 @@ ad_delete:
     methods:  [POST, DELETE]
 
 lista:
-    path:     /{id}
+    path:     /{id}/lista
     defaults: { _controller: "RANHUserBundle:Ad:obtenerLista"}
     methods:  [GET]
